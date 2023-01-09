@@ -1,7 +1,7 @@
 import allure
-from HeaderPage import HeaderPage
-from OrderPage import OrderPage
-from MainPage import MainPage
+from pages.HeaderPage import HeaderPage
+from pages.OrderPage import OrderPage
+from pages.MainPage import MainPage
 import UserData
 
 
@@ -38,8 +38,8 @@ def test_click_on_the_order_button_on_body_check_page_order_page(get_driver):
 @allure.suite("полный заказ")
 @allure.title("полный тест на проверку создания заказа")
 @allure.description("проходит все этапы заполнения перед оформлением заказа")
-def test_full_order_check_order_complite(get_driver_firefox):
-    driver = get_driver_firefox
+def test_full_order_check_order_complite(get_driver):
+    driver = get_driver
     order_page = OrderPage(driver)
     userdata = UserData
     driver.get("https://qa-scooter.praktikum-services.ru/order")

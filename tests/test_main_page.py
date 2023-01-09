@@ -1,7 +1,7 @@
 from time import sleep
 import allure
-from HeaderPage import HeaderPage
-from MainPage import MainPage
+from pages.HeaderPage import HeaderPage
+from pages.MainPage import MainPage
 
 
 @allure.feature("Шапка")
@@ -27,6 +27,7 @@ def test_click_logo_yandex_check_main_page(get_driver):
     main_page = MainPage(driver)
 
     header.click_logo_yandex()
-    sleep(14)
+    sleep(5)
     driver.switch_to.window(driver.window_handles[-1])
+
     assert main_page.check_current_url(driver.current_url, "https://dzen.ru")

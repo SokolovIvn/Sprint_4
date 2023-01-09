@@ -1,6 +1,3 @@
-import random
-
-
 def get_user1_data():
     user1 = {
         "Name": "КакоетоИмя",
