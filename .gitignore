@@ -3,3 +3,4 @@ __pycache__
 venv
 geckodriver.log
 .DS_Store
+requirements.txt
