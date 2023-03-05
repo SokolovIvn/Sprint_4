@@ -11,7 +11,7 @@ class TestAccordion:
     @classmethod
     @allure.title("открытие браузера")
     def setup_class(cls):
-        cls.driver = webdriver.Firefox("/Users/iv/webdriver/bin")
+        cls.driver = webdriver.Firefox()
         cls.driver.get("https://qa-scooter.praktikum-services.ru/")
         cls.driver.maximize_window()
         MainPage(cls.driver).scroll_to_list()
